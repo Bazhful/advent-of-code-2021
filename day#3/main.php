@@ -17,14 +17,13 @@ class DayThree {
 
     }
 
-    public function PartOne()
-    {
+    public function PartOne(){
         $handle = fopen("input.txt", "r");
         if ($handle) while (($line = fgets($handle)) !== false) {
             $temp = trim($line);
             $x = str_split($temp);
             array_push($this->structure, $x);
-            /*
+            
             for($i = 0; $i < count($this->gameboard); $i++){
                 $mid = count($this->gameboard) / 2;
                 $count = 0;
@@ -42,16 +41,11 @@ class DayThree {
             }
             echo "\n";
 
-        }*/
         }
-        #print_r($this->gameboard);
+    
+        print_r($this->gameboard);
         unset($handle);
     }
-
-    public function PartTwo()
-    {
-    }
-
 }
 
 $x = new DayThree();
