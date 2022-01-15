@@ -66,15 +66,6 @@ class Solver {
         echo self::password_generate(7)."\n";
     }
 
-    public static function test(){
-        $data_array = array(1, 2, 3, 4);
-        echo array_walk($data_array, 'Add');
-    }
-
-    public function Add($x){ 
-        return $x+$x;
-    }
-
 }
 
 
