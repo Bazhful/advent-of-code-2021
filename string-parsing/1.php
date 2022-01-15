@@ -1,23 +1,7 @@
 <?php
 class Solver {
-    
-    // Functions that are important for parsing.
-    /*
-        ?? 'strtolower & strtoupper: Makes string upper or lower case
-        ?? substr (Imporant): Return part of a string
-        ?? chunk_split: Split a string into smaller chunks.
-        ?? str_contains: Check if substring can be found inside string.
-        ?? Explode: explode string into an array.
-        ?? strstr: Find the first occurence of a string
-        ?? str_shuffle: Randomly shuffles a string
-        ?? strlen: length of string
-        ?? strspn: Finds the length of the initial segment of a string consisting entirely of characters contained within a given mask.
-        ?? implode: 
-        ?? str_split & str_replace
-        ?? strrpos:
-        ?? trim & ltrim:
-    */
-    public static function  _strtolower(){
+
+    public static function challenge1(){
         /**
         * 1. Write a PHP script to
         * a) transform a string all uppercase letters.
@@ -82,24 +66,22 @@ class Solver {
         echo self::password_generate(7)."\n";
     }
 
-    public static function challenge10(){
-        $sample = "the quick brown fox jumps over the lazy dog";
-        $count = 0;
-        $prased = preg_replace("/the/", "That", $sample, 1);
-        echo $prased;
+    public static function test(){
+        $data_array = array(1, 2, 3, 4);
+        echo array_walk($data_array, 'Add');
     }
 
-    public static function challenge11(){
-        $str_pos = strspn("hek", "hej", "\0");
-    }
-
-    public static function challenge12(){
-
+    public function Add($x){ 
+        return $x+$x;
     }
 
 }
 
 
+$fruits = array("butter" => 5.3, "meat" => 7, "banana" => 3);
 
+function test_print(int $item2, $key) {
+    echo "$key: " + $item2 + 1 + "<br />\n";
+}
 
-Solver::challenge10();
+array_walk($fruits, 'test_print');
